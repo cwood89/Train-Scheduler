@@ -7,7 +7,6 @@
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <!-- link to css stlyesheet -->
     <link rel = "stylesheet" type = text/css href = "assets/css/style.css">
     <!-- link to jquery libary -->
@@ -21,8 +20,8 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1>Train Scheduler</h1> 
-            <p>It's never a bad time to make an escape!</p> 
+            <h1 class="text-center">Train Scheduler</h1> 
+            <p class="text-center">It's never a bad time to make an escape!</p> 
         </div> 
     </div>
 
@@ -30,7 +29,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Current Train Schedule</h4>
-                <table class="table table-hover">
+                <table class="table table-hover" id = "train-table">
                     <thead>
                         <tr>
                         <th>Train Name</th>
@@ -81,29 +80,31 @@
             </div>
         </div>
     </div>
-
+    <div class = "container">
+        <p></p>
+    </div>
     <div class="container">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Add a Train</h4>
                     <form action="/action_page.php">
                         <div class="form-group">
-                          <label for="train">Train Name</label>
+                          <label for="train"><strong>Train Name</strong></label>
                           <input type="text" class="form-control" id="train">
                         </div>
                         <div class="form-group">
-                          <label for="destination">Destination</label>
+                          <label for="destination"><strong>Destination</strong></label>
                           <input type="text" class="form-control" id="destination">
                         </div>
                         <div class="form-group">
-                            <label for="time">First Train Time (HH:mm - Military Time)</label>
+                            <label for="time"><strong>First Train Time (HH:mm - Military Time)</strong></label>
                             <input type="text" class="form-control" id="time">
                         </div>
                         <div class="form-group">
-                            <label for="frequency">Frequency (min)</label>
-                            <input type="text" class="form-control" id="frequency">
+                            <label for="frequency"><strong>Frequency (min)</strong></label>
+                            <input type="number" class="form-control" id="frequency">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
                     </form>
                 </div>
             </div>
